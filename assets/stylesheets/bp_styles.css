@@ -1,0 +1,71 @@
+
+/* ===============================
+   bp_styles.css
+   Author: {Brant Padak}
+   Date:   {10-21-2015}
+
+   
+   Colour Palette (proposed):
+   ---------------
+	grey { color: #61656E}
+	dark grey { color: #43454C}
+	semi-black { color: #111319}
+	highlight { color: #0C1019}
+
+   =============================== */
+/* General */
+*, h1, h2, h3,h4,h5 {
+   font-family: 'Quicksand', sans-serif;
+}
+
+.centerfy {
+   text-align: center;
+   padding-right: 30px;
+   padding-left: 30px;
+}
+
+.justificate {
+   text-align: justify;
+   padding-left: 10px;
+}
+
+/* Body */
+.nav {
+   font-size: 21px;
+   font-weight: bold;
+}
+
+.container-fluid {
+   max-width: 942px;
+   text-align: justify;
+   font-family: 'Quicksand', sans-serif;
+}
+
+.news {
+   max-width: 600px;
+   min-width: 200px;
+   padding-top: 2px;
+   border-color: #61656E;
+   background: rgba(255,255,255,0.1);
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Galleries */
+.thumb {
+    margin-bottom: 30px;
+}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  margin-top:10%;
+  width:5%;
+}
+/* Footer */
+.separator {
+  height: 50px;
+}
