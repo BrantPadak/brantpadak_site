@@ -1,4 +1,4 @@
-<!-- gallery_000.html -->
+<!-- gallery_001.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Brant Padak-gallery base</title>
+    <title>Brant Padak-gallery 001</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,13 +22,14 @@
     <!-- Slate from bootswatch.com -->
     <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="assets/stylesheets/bp_styles.css">
+    <link rel="stylesheet" href="assets/stylesheets/ekko-lightbox.css">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
 
   </head>
   <header>
-    <div class="centerfy">
-      <img src="http://placehold.it/900x200?text=Brant+Padak">
+    <div class="container-fluid">
+      <img src="assets/images/logo/banner.png" class="img-responsive" alt="Brant Padak">
     </div>
   </header><!-- end header -->
   <body>
@@ -39,37 +40,41 @@
         <li role="presentation"><a href="contact.html">Contacts</a></li>
       </ul>
       <div class="well">
-        <h2 class="centerfy">Gallery OOO</h2>
+        <h2 class="centerfy">Gallery OO1</h2>
         <div class="container-fluid">
 
-        <div class="row gallery">
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-toggle="modal" data-target=".myModal">
+        <div class="row"><!-- row wrapper -->
+          <div class="col-md-offset-2 col-md-8">
+            <div class="row"><!--first row  -->
+              <a href="http://placehold.it/400x300" data-toggle="lightbox" data-gallery="multiimages" data-title="Test One" class="col-sm-4 thumb">
                   <img class="img-responsive" src="http://placehold.it/400x300" alt="test one">
               </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-toggle="modal" data-target=".myModal">
+              <a href="assets/images/portfolio/GnI_image.gif" data-toggle="lightbox" data-gallery="multiimages" data-title="Test Two" class="col-sm-4 thumb">
                   <img class="img-responsive" src="assets/images/portfolio/GnI_image.gif" alt="test two">
               </a>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-toggle="modal" data-target=".myModal">
+              <a href="assets/images/portfolio/awg_image.gif" data-toggle="lightbox" data-gallery="multiimages" data-title="Test Three" class="col-sm-4 thumb">
                   <img class="img-responsive" src="assets/images/portfolio/awg_image.gif" alt="test three">
               </a>
-            </div>            
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-toggle="modal" data-target=".myModal">
+            </div><!-- end first row -->
+            <div class="row"><!-- second row -->
+              <a href="assets/images/portfolio/alphafont.gif" data-toggle="lightbox" data-gallery="multiimages" data-title="Test Four" class="col-sm-4 thumb">
                   <img class="img-responsive" src="assets/images/portfolio/alphafont.gif" alt="test four">
               </a>
-            </div>            
-
-        </div><!-- end gallery -->
-
+              <a href="assets/images/logo/Guy-on-Target.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Test Five" class="col-sm-4 thumb">
+                  <img class="img-responsive" src="assets/images/logo/Guy-on-Target.jpg" alt="test five">
+              </a>
+              <a href="assets/images/portfolio/TTSlogo.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Test Six" class="col-sm-4 thumb">
+                  <img class="img-responsive" src="assets/images/portfolio/TTSlogo.png" alt="test six">
+              </a>
+            </div><!-- end second row -->
+          </div>
+        </div><!-- end wrapper -->
+       
+        <div class="row">
+          <div class="col-xs-12 centerfy">
+            <p>This is the text for gallery one.  It provides the description of what is on the gallery page for this entry </p>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xs-5"></div>
           <div class="col-xs-2">
@@ -83,22 +88,6 @@
 
     <!-- Modal(s?) -->
 
-    <div class="modal fade myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-
-            
-
-          </div><!-- end modal-body -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -107,44 +96,102 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- <script src="//code.jquery.com/jquery.js"></script> -->
     
+    <script src="assets/javascript/ekko-lightbox.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+            // delegate calls to data-toggle="lightbox"
+            $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+                event.preventDefault();
+                return $(this).ekkoLightbox({
+                    onShown: function() {
+                        if (window.console) {
+                            return console.log('Checking our the events huh?');
+                        }
+                    },
+        onNavigate: function(direction, itemIndex) {
+                        if (window.console) {
+                            return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                        }
+        }
+                });
+            });
+
+            //Programatically call
+            $('#open-image').click(function (e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
+            });
+            $('#open-youtube').click(function (e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
+            });
+
+    // navigateTo
+            $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+                event.preventDefault();
+
+                var lb;
+                return $(this).ekkoLightbox({
+                    onShown: function() {
+
+                        lb = this;
+
+          $(lb.modal_content).on('click', '.modal-footer a', function(e) {
+
+            e.preventDefault();
+            lb.navigateTo(2);
+
+          });
+
+                    }
+                });
+            });
+
+
+        });
+    </script>
+
   </body>
 
   <footer>
-    <div class="row">
-      <div class="col-md-2">
-      </div><!-- end col-md-2 -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+        </div><!-- end col-md-2 -->
 
-      <div class="col-md-2 legal">
-        <p>brantpadak.com </p>
-        <p>- -</p>
-        <p>copyright &copy; 2015 Brant Padak</p>
+        <div class="col-md-2 legal">
+          <p>brantpadak.com </p>
+          <p>- -</p>
+          <p></p>
         </div><!-- end legal -->
 
-      <div class="col-xs-1">
-      </div><!-- end col-xs-1 -->
+        <div class="col-xs-1">
+        </div><!-- end col-xs-1 -->
 
-    <div class="col-xs-2 map">
-      <p><a href="main.html">Main</a></p>
-      <p><a href="portfolio.html">Portfolio</a></p>
-      <p><a href="contact.html">Contact</a></p>
-    </div><!-- end map -->
+        <div class="col-xs-2 map">
+          <p><a href="main.html">Main</a></p>
+          <p><a href="portfolio.html">Portfolio</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div><!-- end map -->
 
-    <div class="col-xs-1">
-    </div><!-- end col-xs-1 -->
+        <div class="col-xs-1">
+        </div><!-- end col-xs-1 -->
 
-    <div class="col-xs-2 madeby">
-      <p>Bootstrap</br> <a href="www.getbootstrap.com">getbootstrap.com</a></p>
-      <p>Slate Theme <a href="bootswatch.com">bootswatch.com</a></p>
-    </div><!-- end madeby -->
+        <div class="col-xs-2 madeby">
+          <p>Bootstrap</br> <a href="www.getbootstrap.com">getbootstrap.com</a></p>
+          <p>Slate Theme from <a href="bootswatch.com">bootswatch.com</a></p>
+        </div><!-- end madeby -->
 
-    <div class="col-xs-2">
-    </div><!-- end col-xs-2 -->
+        <div class="col-xs-2">
+        </div><!-- end col-xs-2 -->
 
-  </div><!-- end row? -->
+      </div><!-- end row? -->
 
-    <div class="col-xs-12 separator">
-    
-    </div><!--end separator-->
-
+        <div class="col-xs-12 separator">
+          <style type="text/css">.col-xs-12 {height: 50px;} </style>
+        </div><!--end separator-->
+    </div><!-- end container -->
   </footer><!-- end footer -->
 </html>
