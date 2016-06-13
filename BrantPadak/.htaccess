@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^brantpadak\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.brantpadak\.com$
+RewriteRule ^/?$ "http\:\/\/www\.brantpadak\.net\/main\.html" [R=301,L]
+
